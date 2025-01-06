@@ -6,7 +6,7 @@
                     <NuxtLink to="/">myAnimeSafe</NuxtLink>
                 </h1>
                 <SearchBar v-model="name" />
-                <NuxtLink to="/profile">Profile</NuxtLink>
+                <!-- <NuxtLink to="/profile">Profile</NuxtLink> -->
             </nav>
             <Genres @filterGenre="modifyGenre" />
         </header>
@@ -31,14 +31,15 @@ import Genres from '../components/Genres.vue';
 const page = ref(1);
 
 const previous = () => {
-    if(page >= 2) {
-        page.value--;
+    console.log("took here")
+    if(page.value >= 2) {
+        page.value = page.value - 1;
     }
 }
 
 const next = () => {
-    if(page <= 1117) {
-        page.value++;
+    if(page.value <= 1117) {
+        page.value = page.value + 1;
     }
 }
 
@@ -75,22 +76,18 @@ const fetchAnimes = async () => {
     }
 };
 
-// watchEffect(() => {
-//     fetchAnimes();
-// });
-
-provide('animes', animes.value);
-
 watchEffect(() => {
-    console.log(URL.value);
-    console.log(animes.value);
-})
+    fetchAnimes();
+});
+
+provide('animes', animes);
+
 
 </script>
 
 <style>
 body {
-    background-color: #0f172a;
+    background-color: #090f29;
     color: white;
 
     margin: 0;
