@@ -1,13 +1,12 @@
 <script setup>
 
-const layout = 'baseLayout'
 
 </script>
 
 <template>
   <div>
     <NuxtRouteAnnouncer />
-    <NuxtLayout :name="layout">
+    <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
   </div>

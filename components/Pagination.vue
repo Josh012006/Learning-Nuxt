@@ -13,6 +13,23 @@ const emits = defineEmits(['previous', 'next', 'first', 'last']);
 
 </script>
 
-<style>
+<style scoped>
+button {
+    margin: 10px 20px;
+    padding: 10px 15px;
 
+    color: white;
+    background-color: #0f172a;
+
+    border: none;
+    border-radius: 10px;
+
+    max-width: 200px;
+    min-height: 30px;
+
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+
+    cursor: pointer;
+}
 </style>
