@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink :to="anime.url">
+    <NuxtLink :to="`/anime/${anime?.mal_id}`">
         <img :src="anime.images.jpg.image_url" alt="anime image" />
         <h3>{{ anime.titles[0].title }}</h3>
     </NuxtLink>
