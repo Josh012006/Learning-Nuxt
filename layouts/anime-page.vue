@@ -16,44 +16,43 @@
 
 <script setup>
 
+const router = useRoute();
+
+const { id } = router.params;
+
+
+const anime = ref(null);
+
+const fetchAnime = async () => {
+    const { data, error } = await useFetch(`https://api.jikan.moe/v4/anime/${id}`);
+    if (error.value) {
+        console.error('Erreur lors de la récupération des données :', error.value);
+    } else {
+        anime.value = data.value;
+    }
+};
+
+watchEffect(() => {
+    fetchAnime();
+})
+
+
+
+provide('concernedAnime', anime);
+
 </script>
 
 <style scoped>
 
-body {
-    background-color: #090f29;
-    color: white;
-
-    margin: 0;
-    padding: 0;
-
-    font-size: 17px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-
-    font-weight: bold;
-}
 
 header, footer {
-    min-height: 30px;
-    background-color: #020617;
-
-    padding: 10px;
 
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     font-weight: bold;
 }
 
-main {
-    min-height: 430px;
-}
 
 </style>
