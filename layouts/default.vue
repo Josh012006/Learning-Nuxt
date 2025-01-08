@@ -6,7 +6,6 @@
                     <NuxtLink to="/">myAnimeSafe</NuxtLink>
                 </h1>
                 <SearchBar v-model="name" />
-                <!-- <NuxtLink to="/profile">Profile</NuxtLink> -->
             </nav>
             <Genres @filterGenre="modifyGenre" />
         </header>
