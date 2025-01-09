@@ -1,6 +1,13 @@
-# Nuxt Minimal Starter
+## Showcase
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+<img src="public/showcase1.png" alt="home page">
+<img src="public/showcase2.png" alt="anime page">
+
+## About
+
+This is a simple web app to see information about animes. There is a home page featuring many different types of animes and a separate page for specific information about each one.
+
+It is still lacking in many aspects but at least it shows and uses the main features of Nuxt frontend.
 
 ## Setup
 
@@ -10,14 +17,6 @@ Make sure to install dependencies:
 # npm
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
 ## Development Server
@@ -28,48 +27,8 @@ Start the development server on `http://localhost:3000`:
 # npm
 npm run dev
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## More info
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
